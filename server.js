@@ -18,3 +18,8 @@ const db = mysql.createConnection(
 );
 
 router.listen(PORT, () => console.log(`Listening at http://localhost:${PORT}`));
+
+db.query("SELECT * FROM movies", function (err, results) {
+  console.log("SHOULD BE MOVIE NAMES");
+  console.log(results);
+});

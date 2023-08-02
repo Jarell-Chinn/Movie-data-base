@@ -1,7 +1,7 @@
 const { readFile } = require("fs");
 
-const router = require("express").Router();
+const movies = require("express").Router();
 
-router.get("/", (req, res) => {
-  readFile("./db/schema.sql").then((data) => console.log(data));
+movies.get("/", (req, res) => {
+  readFile(db).then((data) => console.log(data));
 });
